@@ -1,48 +1,68 @@
 # Merizo Landing Page
 
-This folder is a standalone copy of the Merizo landing page. The public HTML pages stay at the project root so direct routes keep working.
+A React + Vite single-page app for the Merizo marketing site.
 
 ## Project Structure
 
 ```txt
 .
-|-- index.html
-|-- about.html
-|-- contact.html
-|-- Merizo Pro.html
-|-- Privacy and Policy.html
-|-- assets/
-|   |-- css/
-|   |-- js/
-|   `-- images/
-|-- api/
-|-- animation/
-|-- netlify.toml
-`-- vercel.json
+|-- index.html            (Vite entry point)
+|-- src/
+|   |-- main.jsx
+|   |-- App.jsx           (routes)
+|   |-- index.css         (Tailwind + global styles)
+|   |-- styles.css        (ported custom design system)
+|   |-- pages/            (Home, About, Contact, MerizoPro, PrivacyPolicy)
+|   |-- components/       (Footer, BillCard)
+|   |-- hooks/            (parallax, globe, typed intro, document title)
+|   `-- lib/               (play store helper)
+|-- public/
+|   |-- assets/images/
+|   `-- robots.txt
+|-- tailwind.config.js
+|-- postcss.config.js
+`-- vite.config.js
 ```
 
-`assets/` contains shared CSS, JavaScript, and image files for the root landing pages. `api/` contains the serverless chat endpoint. `animation/` is a separate Vite animation app with its own package files.
+Routes: `/`, `/about`, `/contact`, `/merizo-pro`, `/pricing` (same content as
+`/merizo-pro`), `/privacy-policy`.
+
+This is a fully static, backend-free build — no serverless functions, no
+Vercel or Netlify config. It can be hosted on any static file host.
 
 ## Run Locally
 
-For the static landing pages:
-
 ```sh
-python -m http.server 5173
-```
-
-Then open:
-
-```txt
-http://127.0.0.1:5173
-```
-
-For the Vite animation app:
-
-```sh
-cd animation
 npm install
 npm run dev
 ```
 
-The CTA buttons open Google Play on Android, Apple App Store search on iOS, and keep the web app behavior by navigating to `/login` on desktop.
+Opens the Vite dev server (prints its own URL, typically
+`http://localhost:5173`).
+
+To build for production:
+
+```sh
+npm run build
+npm run preview
+```
+
+## Contact form (EmailJS)
+
+`contact.html`'s form sends messages straight from the browser via
+[EmailJS](https://www.emailjs.com/) — no backend required. To set it up:
+
+1. Create a free EmailJS account and connect an email service (e.g. Gmail)
+   for `merizoomadasupport@gmail.com`.
+2. Create an email template with `{{name}}`, `{{email}}`, and `{{message}}`
+   variables.
+3. Copy `.env.example` to `.env` and fill in:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+4. Restart `npm run dev` so Vite picks up the new env vars.
+
+Without these set, the form shows a friendly error instead of sending.
+
+The CTA buttons open Google Play on Android and keep the web app behavior by
+navigating to `/login` on desktop.

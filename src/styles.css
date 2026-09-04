@@ -235,7 +235,7 @@ a {
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 13vw, 8.4rem);
+  font-size: clamp(2.75rem, 13vw, 8.4rem);
   font-weight: 800;
   letter-spacing: 0;
   line-height: 0.92;
@@ -1128,7 +1128,7 @@ a {
   }
 
   .title {
-    font-size: clamp(4.6rem, 22vw, 6.2rem);
+    font-size: clamp(3.2rem, 16vw, 6.2rem);
     line-height: 0.86;
     margin-left: auto;
     margin-right: auto;
@@ -1384,9 +1384,10 @@ a {
 
 @media (max-width: 380px) {
   .brand-name {
-    max-width: 90px;
+    max-width: 130px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .navbar .btn {
@@ -1398,9 +1399,12 @@ a {
     font-size: 0.82rem;
   }
 
-  .title,
+  .title {
+    font-size: clamp(2.9rem, 15vw, 5.2rem);
+  }
+
   .browse-intelligence .title {
-    font-size: clamp(4rem, 21vw, 5.2rem);
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
   }
 
   .phone-status strong {
@@ -1480,238 +1484,6 @@ a {
   .phone-status strong {
     font-size: 1.55rem;
   }
-}
-
-.about-page {
-  min-height: 100vh;
-}
-
-.about-page .logo-button {
-  text-decoration: none;
-}
-
-.about-nav-actions {
-  align-items: center;
-  display: flex;
-  gap: 1rem;
-}
-
-.about-nav-link {
-  color: var(--text-secondary);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.about-nav-link:hover {
-  color: var(--text-primary);
-}
-
-.about-main {
-  margin: 0 auto;
-  max-width: 1120px;
-  padding: clamp(1.25rem, 3vw, 2.75rem) clamp(1rem, 4vw, 2rem) 0;
-  position: relative;
-  z-index: 10;
-}
-
-.about-hero {
-  align-items: start;
-  display: grid;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
-  min-height: 0;
-}
-
-.about-kicker {
-  color: var(--primary-color);
-  font-size: 0.84rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.8rem;
-  text-transform: uppercase;
-}
-
-.about-hero h1,
-.about-section-heading h2 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: 0;
-}
-
-.about-hero h1 {
-  font-size: clamp(2.75rem, 6vw, 5.25rem);
-  line-height: 0.95;
-  margin-bottom: 1.35rem;
-  max-width: 620px;
-}
-
-.about-hero p:not(.about-kicker),
-.about-copy-grid p,
-.about-card p,
-.team-card p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-.about-hero p:not(.about-kicker) {
-  max-width: 650px;
-}
-
-.about-visual {
-  aspect-ratio: 4 / 3;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(124, 92, 255, 0.14), transparent 34%),
-    linear-gradient(135deg, rgba(23, 143, 141, 0.14), rgba(255, 255, 255, 0.92));
-  border: 1px solid rgba(10, 10, 10, 0.1);
-  border-radius: 8px;
-  display: grid;
-  justify-self: end;
-  max-width: 430px;
-  min-width: 0;
-  place-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.about-logo-frame {
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, #18b8ad, #0b7dff);
-  border-radius: 8px;
-  box-shadow: 0 18px 38px rgba(23, 143, 141, 0.18);
-  height: clamp(92px, 16vw, 136px);
-  overflow: hidden;
-  width: clamp(150px, 24vw, 220px);
-}
-
-.about-logo-frame img {
-  display: block;
-  height: 112%;
-  margin: -6%;
-  max-width: none;
-  object-fit: cover;
-  width: 112%;
-}
-
-.about-mini-stat {
-  background-color: white;
-  border: 1px solid rgba(10, 10, 10, 0.1);
-  border-radius: 8px;
-  bottom: 1rem;
-  box-shadow: 0 18px 40px rgba(10, 10, 10, 0.12);
-  display: grid;
-  gap: 0.35rem;
-  left: 1rem;
-  min-width: 150px;
-  padding: 1rem;
-  position: absolute;
-}
-
-.about-mini-stat span,
-.about-mini-stat small {
-  color: var(--text-secondary);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.about-mini-stat strong {
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  line-height: 1;
-}
-
-.about-copy-grid,
-.about-card-grid,
-.team-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.about-copy-grid {
-  border-bottom: 1px solid var(--line-color);
-  border-top: 1px solid var(--line-color);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: clamp(2.5rem, 7vw, 5rem) 0;
-  padding: clamp(1.5rem, 4vw, 2.5rem) 0;
-}
-
-.about-copy-grid h2,
-.about-card h3,
-.team-card h3 {
-  font-size: 1.25rem;
-  line-height: 1.25;
-  margin-bottom: 0.65rem;
-}
-
-.about-values,
-.about-team {
-  margin: clamp(2.5rem, 7vw, 5rem) 0;
-}
-
-.about-section-heading {
-  margin-bottom: 1.5rem;
-  max-width: 720px;
-}
-
-.about-section-heading h2 {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1;
-}
-
-.about-card-grid,
-.team-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.about-card,
-.team-card {
-  background-color: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(10, 10, 10, 0.1);
-  border-radius: 8px;
-  padding: 1.15rem;
-}
-
-.about-card-icon {
-  align-items: center;
-  background-color: rgba(23, 143, 141, 0.1);
-  border-radius: 999px;
-  color: var(--primary-color);
-  display: inline-flex;
-  font-size: 0.82rem;
-  font-weight: 900;
-  height: 34px;
-  justify-content: center;
-  margin-bottom: 1rem;
-  width: 48px;
-}
-
-.team-card {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.team-avatar {
-  align-items: center;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  border-radius: 8px;
-  color: white;
-  display: flex;
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 800;
-  height: 56px;
-  justify-content: center;
-  width: 56px;
-}
-
-.team-card h4 {
-  color: var(--primary-color);
-  font-size: 0.88rem;
-  margin-top: -0.35rem;
-}
-
-.about-footer {
-  margin-top: clamp(3rem, 7vw, 5rem);
 }
 
 .pro-page {
@@ -2041,19 +1813,6 @@ a {
 }
 
 @media (max-width: 820px) {
-  .about-hero,
-  .about-copy-grid,
-  .about-card-grid,
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-visual {
-    aspect-ratio: 16 / 10;
-    justify-self: stretch;
-    max-width: none;
-  }
-
   .pro-pricing-grid {
     margin: 0 auto;
     max-width: 560px;
@@ -2085,23 +1844,6 @@ a {
 }
 
 @media (max-width: 560px) {
-  .about-nav-actions {
-    gap: 0.75rem;
-  }
-
-  .about-nav-actions .btn {
-    min-height: 40px;
-    padding: 0.6rem 0.8rem;
-  }
-
-  .about-nav-actions .btn span {
-    display: none;
-  }
-
-  .about-hero {
-    min-height: auto;
-  }
-
   .pro-navbar {
     align-items: center;
     gap: 0.6rem;
@@ -2190,7 +1932,7 @@ a {
   }
 
   .pro-logo .brand-name {
-    max-width: 96px;
+    max-width: 150px;
   }
 
   .pro-main {
@@ -2202,3 +1944,4 @@ a {
     padding: 0.95rem;
   }
 }
+

@@ -1,0 +1,152 @@
+.contact-page {
+  --text-primary: #0a0a0a;
+  --text-secondary: #626262;
+}
+
+.contact-page .merizo-logo {
+  aspect-ratio: 1;
+  clip-path: inset(0 round 12px);
+  height: clamp(36px, 8vw, 48px);
+  width: clamp(36px, 8vw, 48px);
+  object-fit: contain;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  background: transparent;
+  background-clip: padding-box;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+}
+
+.contact-card-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1.5rem 3rem;
+}
+
+.contact-card {
+  background: #f4faf9;
+  border: 1px solid rgba(23, 143, 141, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 24px 50px rgba(10, 10, 10, 0.07);
+  max-width: 640px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  position: relative;
+  width: 100%;
+}
+
+.contact-card-icon {
+  color: teal;
+  font-size: 1.9rem;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 24;
+  position: absolute;
+  right: clamp(1.5rem, 4vw, 2.25rem);
+  top: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.contact-card-title {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  padding-right: 2.5rem;
+}
+
+.contact-card-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  max-width: 460px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-field {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  border-radius: 10px;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0 0.9rem;
+}
+
+.contact-field:focus-within {
+  border-color: teal;
+  outline: 2px solid rgba(0, 128, 128, 0.16);
+  outline-offset: 1px;
+}
+
+.contact-field .material-symbols-rounded {
+  color: #8a938f;
+  font-size: 1.2rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  flex: 1;
+  font: inherit;
+  padding: 0.8rem 0;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+}
+
+.contact-field-textarea {
+  align-items: flex-start;
+  padding: 0.2rem 0.9rem;
+}
+
+.contact-field-textarea textarea {
+  padding: 0.6rem 0;
+  resize: vertical;
+}
+
+.contact-form-footer {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.contact-submit-btn {
+  background: #101010;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.8rem 1.75rem;
+}
+
+.contact-submit-btn:hover {
+  background: #262626;
+}
+
+.contact-submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.contact-form-status {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-form-status[data-state="success"] {
+  color: teal;
+}
+
+.contact-form-status[data-state="error"] {
+  color: #c0392b;
+}

@@ -1,7 +1,5 @@
 node_modules/
 dist/
-.vercel/
-.netlify/
 
 .env
 .env.local
@@ -9,3 +7,4 @@ dist/
 
 *.log
 npm-debug.log*
+.claude

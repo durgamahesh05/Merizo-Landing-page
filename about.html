@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en" class="">
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="apple-itunes-app" content="app-id=458023433, app-argument=merizo://open">
+
+    <meta name="description"
+        content="Merizo is a free tool for friends and roommates to track bills and shared expenses easily.">
+
+    <meta name="color-scheme" content="">
+
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <meta property="og:description"
+        content="Merizo is a free tool for friends and roommates to track bills and shared expenses easily.">
+
+    <meta property="og:title" content="About Merizo">
+
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:image:secure_url" content="assets/images/logo.png">
+    <meta property="og:image:alt" content="Merizo logo">
+
+    <meta property="og:site_name" content="Merizo">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.merizo.com/about">
+
+    <meta property="fb:app_id" content="293864780643203">
+
+    <meta property="og:locale" content="en">
+
+    <meta name="twitter:card" content="app">
+
+    <!-- ORIGINAL CSS -->
+    <link rel="stylesheet"
+        href="https://assets.splitwise.com/assets/motel-2004ca3670ee556421314dd93fe7e0c6be271a628c27e0a25db9795499cb2499.css"
+        media="all">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:400,600,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/file-protocol-redirect.js"></script>
+
+    <link rel="canonical" href="https://www.merizo.com/about">
+
+    <title>About :: Merizo</title>
+
+    <!-- ONLY EDGE FIX -->
+    <style>
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #626262;
+            --primary-color: #137472;
+        }
+
+        html,
+        body,
+        .bg-facets {
+            background: #ffffff !important;
+        }
+
+        .logo-container {
+            border: 0;
+            border-radius: 0;
+            overflow: visible;
+            display: inline-block;
+            aspect-ratio: 1;
+            flex: 0 1 clamp(280px, 36vw, 420px);
+            background: transparent;
+            height: auto;
+            line-height: 0;
+            max-width: 100%;
+            min-width: 0;
+            transform-origin: center;
+            transition: box-shadow 0.24s ease, transform 0.24s ease;
+            width: clamp(280px, 36vw, 420px);
+        }
+
+        .logo-container:hover {
+            transform: translateY(-8px) scale(1.045);
+        }
+
+        .merizo-main-logo {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 0;
+
+            overflow: visible;
+
+            background: transparent;
+
+            background-clip: padding-box;
+
+            display: block;
+            filter: drop-shadow(0 16px 22px rgba(10, 10, 10, 0.11));
+            transform: none;
+        }
+
+        .merizo-header-logo {
+            aspect-ratio: 1;
+            clip-path: inset(0 round 12px);
+            height: clamp(48px, 7vw, 60px);
+            width: clamp(48px, 7vw, 60px);
+
+            object-fit: contain;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background: transparent;
+
+            background-clip: padding-box;
+
+            display: block;
+
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+            mask-image: radial-gradient(white, black);
+            transition: transform 0.24s ease;
+        }
+
+        .merizo-header-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .sm-cta-button {
+            align-items: center;
+            border-radius: 999px !important;
+            display: inline-flex;
+            font-weight: 700;
+            justify-content: center;
+            min-height: 40px;
+            text-decoration: none;
+        }
+
+        .people-section {
+            margin: 4rem 0 1rem;
+        }
+
+        .people-eyebrow {
+            color: var(--primary-color);
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.65rem;
+            text-transform: uppercase;
+        }
+
+        .people-heading {
+            color: var(--text-primary);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .people-intro {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 760px;
+        }
+
+        .people-block {
+            margin-top: 2.5rem;
+        }
+
+        .people-block-title {
+            color: var(--text-primary);
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            gap: 2.4rem 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin-top: 3.2rem;
+        }
+
+        .team-member-card,
+        .story-card {
+            border: 1px solid rgba(10, 10, 10, 0.1);
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .team-member-card {
+            color: inherit;
+            cursor: pointer;
+            display: block;
+            min-height: 320px;
+            padding: 4.4rem 1.6rem 1.6rem;
+            position: relative;
+            text-decoration: none;
+            transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+        }
+
+        .team-member-card:hover,
+        .team-member-card:focus-visible {
+            border-color: rgba(23, 143, 141, 0.34);
+            box-shadow: 0 24px 44px rgba(10, 10, 10, 0.13);
+            transform: translateY(-8px) scale(1.025);
+        }
+
+        .team-member-card:focus-visible {
+            outline: 3px solid rgba(23, 143, 141, 0.35);
+            outline-offset: 4px;
+        }
+
+        .team-photo-placeholder {
+            align-items: center;
+            background: #f2f5f5;
+            border: 6px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 10px 22px rgba(10, 10, 10, 0.12);
+            color: transparent;
+            display: flex;
+            height: 96px;
+            justify-content: center;
+            left: 50%;
+            overflow: hidden;
+            padding: 5px;
+            position: absolute;
+            top: -48px;
+            transform: translateX(-50%);
+            transition: box-shadow 0.24s ease, transform 0.24s ease;
+            width: 96px;
+        }
+
+        .team-photo-placeholder img {
+            border-radius: 50%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.24s ease;
+            width: 100%;
+        }
+
+        .team-member-card:hover .team-photo-placeholder,
+        .team-member-card:focus-visible .team-photo-placeholder {
+            box-shadow: 0 18px 34px rgba(23, 143, 141, 0.24);
+            transform: translateX(-50%) scale(1.13);
+        }
+
+        .team-member-card:hover .team-photo-placeholder img,
+        .team-member-card:focus-visible .team-photo-placeholder img {
+            transform: scale(1.08);
+        }
+
+        .team-member-card h3,
+        .story-card h3 {
+            color: var(--text-primary);
+            font-size: 1.65rem;
+            font-weight: 800;
+            margin-bottom: 0.35rem;
+        }
+
+        .team-member-card h3 {
+            margin-bottom: 1.2rem;
+        }
+
+        .team-member-card .team-role {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 0.45rem;
+        }
+
+        .team-company {
+            color: var(--text-secondary);
+            font-weight: 800;
+            margin-bottom: 0.2rem;
+        }
+
+        .team-member-card p,
+        .story-card p,
+        .story-card li {
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .story-card {
+            padding: 1.35rem;
+        }
+
+        .story-card + .story-card {
+            margin-top: 1rem;
+        }
+
+        .gratitude-grid {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .gratitude-card {
+            border: 1px solid rgba(10, 10, 10, 0.14);
+            box-shadow: 0 16px 34px rgba(10, 10, 10, 0.06);
+            min-height: 310px;
+            padding: 1.75rem;
+            transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+        }
+
+        .gratitude-card:hover {
+            border-color: rgba(23, 143, 141, 0.34);
+            box-shadow: 0 24px 44px rgba(10, 10, 10, 0.13);
+            transform: translateY(-8px) scale(1.025);
+        }
+
+        .gratitude-card h3 {
+            margin-bottom: 0.65rem;
+        }
+
+        .gratitude-card .team-role {
+            color: var(--primary-color);
+            font-size: 0.86rem;
+            letter-spacing: 0.08em;
+            margin: 1rem 0 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .story-label {
+            color: var(--primary-color);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .story-role {
+            color: var(--text-primary);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .story-quote {
+            color: var(--text-primary);
+            font-weight: 800;
+            margin-top: 0.9rem;
+        }
+
+        .founder-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 0.9rem 0;
+            padding: 0;
+        }
+
+        .founder-list li {
+            border: 1px solid rgba(10, 10, 10, 0.1);
+            border-radius: 999px;
+            list-style: none;
+            padding: 0.45rem 0.8rem;
+        }
+
+        @keyframes textFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes merizoTyping {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 14ch;
+            }
+        }
+
+        @keyframes cursorBlink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typedCursorBlink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes textGlowPulse {
+            0%,
+            100% {
+                text-shadow: none;
+            }
+
+            50% {
+                text-shadow: 0 10px 26px rgba(23, 143, 141, 0.2);
+            }
+        }
+
+        main h1,
+        main h2,
+        main h3,
+        main p,
+        main strong,
+        main .team-company,
+        main .team-role,
+        main .story-role {
+            animation: textFadeUp 0.72s ease both;
+            transition: color 0.24s ease, letter-spacing 0.24s ease, text-shadow 0.24s ease, transform 0.24s ease;
+        }
+
+        main h1:hover,
+        main h2:hover,
+        main h3:hover,
+        main strong:hover,
+        main .people-eyebrow:hover,
+        main .team-role:hover,
+        main .story-role:hover {
+            color: var(--primary-color);
+            text-shadow: 0 10px 26px rgba(23, 143, 141, 0.2);
+            transform: translateY(-3px) scale(1.015);
+        }
+
+        main p:hover,
+        main .team-company:hover {
+            color: var(--text-primary);
+            transform: translateX(4px);
+        }
+
+        .merizo-intro-card {
+            background: #ffffff;
+            border: 1px solid rgba(23, 143, 141, 0.16);
+            border-radius: 8px;
+            box-shadow: 0 18px 38px rgba(10, 10, 10, 0.06);
+            padding: clamp(1.75rem, 4vw, 2.6rem);
+        }
+
+        @media (min-width: 1024px) {
+            .about-hero-layout {
+                gap: 3rem;
+            }
+
+            .about-hero-copy {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+
+            .merizo-intro-card {
+                min-height: 520px;
+            }
+        }
+
+        .merizo-intro-card p {
+            margin-top: 1rem;
+        }
+
+        .merizo-intro-card strong {
+            margin-top: 1.65rem;
+        }
+
+        .merizo-intro-card h1 {
+            display: inline-block;
+            padding-right: 0.16em;
+            text-shadow:
+                1px 0 0 rgba(23, 143, 141, 0.16),
+                -1px 0 0 rgba(23, 143, 141, 0.16),
+                0 1px 0 rgba(23, 143, 141, 0.16),
+                0 -1px 0 rgba(23, 143, 141, 0.16);
+        }
+
+        .typed-cursor {
+            animation: typedCursorBlink 0.78s step-end infinite;
+            color: var(--primary-color);
+            display: inline-block;
+            font-weight: 800;
+            margin-left: 0.12em;
+        }
+
+        .typed-answer-hidden {
+            opacity: 0 !important;
+            transform: translateY(10px);
+        }
+
+        .typed-answer-visible {
+            opacity: 1 !important;
+            transform: translateY(0);
+            transition: opacity 0.32s ease, transform 0.32s ease;
+        }
+
+        .merizo-intro-card p:nth-of-type(1) {
+            animation-delay: 0.18s;
+        }
+
+        .merizo-intro-card strong {
+            animation-delay: 0.32s;
+        }
+
+        .merizo-intro-card p:nth-of-type(2) {
+            animation-delay: 0.46s;
+        }
+
+        .people-eyebrow {
+            animation: textFadeUp 0.72s ease 0.15s both, textGlowPulse 2.8s ease-in-out 1.1s infinite;
+        }
+
+        .people-heading {
+            animation-delay: 0.28s;
+        }
+
+        .people-intro {
+            animation-delay: 0.42s;
+        }
+
+        .people-block-title {
+            animation-delay: 0.18s;
+        }
+
+        .team-member-card:nth-child(1) h3,
+        .team-member-card:nth-child(1) p,
+        .gratitude-card:nth-child(1) h3,
+        .gratitude-card:nth-child(1) p {
+            animation-delay: 0.12s;
+        }
+
+        .team-member-card:nth-child(2) h3,
+        .team-member-card:nth-child(2) p,
+        .gratitude-card:nth-child(2) h3,
+        .gratitude-card:nth-child(2) p {
+            animation-delay: 0.24s;
+        }
+
+        .team-member-card:nth-child(3) h3,
+        .team-member-card:nth-child(3) p {
+            animation-delay: 0.36s;
+        }
+
+        .team-member-card:nth-child(4) h3,
+        .team-member-card:nth-child(4) p {
+            animation-delay: 0.48s;
+        }
+
+        @media (max-width: 900px) {
+            .team-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gratitude-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .merizo-intro-card {
+                padding: 1.35rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            main h1,
+            main h2,
+            main h3,
+            main p,
+            main strong,
+            main .people-eyebrow,
+            main .team-company,
+            main .team-role,
+            main .story-role,
+            .merizo-intro-card h1 {
+                animation: none;
+                transition: none;
+            }
+
+            .typed-cursor {
+                display: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body class="font-sans subpixel-antialiased" id="">
+
+    <div class="container mx-auto">
+
+        <!-- ORIGINAL HEADER -->
+        <header class="flex items-center justify-between px-8 py-5 font-mont mx-auto">
+
+            <!-- HEADER LOGO -->
+            <div class="flex items-center w-[105px] h-[36px] sm:w-[140px] sm:h-[48px]">
+
+                <img src="./assets/images/favicon.png"
+                    alt="Merizo Logo"
+                    class="merizo-header-logo">
+
+            </div>
+
+           <div id="guest"
+    class="flex items-center text-xs sm:text-sm md:text-normal font-normal">
+
+    <div class="dropdown relative">
+
+        <!-- Merizo  Login -->
+        <a class="px-4 block cursor-pointer font-mont font-semibold"
+            href="./merizo_login.html"
+            style="color: teal;">
+            Log in
+        </a>
+
+    </div>
+
+    <!-- Merizo Blue Signup -->
+    <a class="text-white px-3 py-2 sm:px-5 sm:py-3 rounded shadow sm-cta-button"
+        href="./merizo_login.html#signup"
+        style="
+            background-color: teal;
+            border-color: teal;
+        ">
+        Sign up
+    </a>
+
+</div>
+
+            </div>
+
+        </header>
+    </div>
+
+    <!-- MAIN -->
+    <main class="bg-facets pt-8">
+
+        <div class="container mx-auto px-8 text-charcoal lg:max-w-5xl">
+
+            <!-- ORIGINAL LAYOUT -->
+            <div class="about-hero-layout lg:flex lg:justify-between lg:items-center">
+
+                <div class="about-hero-copy lg:w-6/12">
+
+                    <div class="merizo-intro-card" data-typed-intro>
+                        <h1 class="text-3xl block mb-4 lg:text-4xl" data-type-line>
+                            What is Merizo?
+                        </h1>
+
+                        <p data-type-line>
+                            Merizo is a modern expense-sharing platform that makes it easy
+                            to split bills with friends and family.
+                            We organize all your shared expenses and balances in one place,
+                            so everyone can clearly see who owes whom.
+                            Whether you are sharing a trip expense,
+                            splitting rent with roommates,
+                            or paying someone back for lunch,
+                            Merizo makes life easier.
+                            We store your data securely in the cloud so that
+                            you can access it anywhere:
+                            on iPhone, Android, or on your computer.
+                        </p>
+
+                        <strong class="font-bold mt-4 block" data-type-line>
+                            We focus on simplicity and fairness
+                        </strong>
+
+                        <p data-type-line>
+                            Most people want expense sharing to be simple and fair,
+                            but sometimes calculations become confusing.
+                            Merizo helps users automatically calculate balances,
+                            track payments,
+                            and avoid misunderstandings between groups.
+                            Our goal is to make shared expense management
+                            smooth, transparent, and stress-free.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- MAIN LOGO -->
+                <div class="logo-container hidden lg:block">
+
+                    <img src="./assets/images/logo-transparent.png"
+                        alt="Merizo Logo"
+                        class="merizo-main-logo">
+
+                </div>
+
+            </div>
+
+            <section class="people-section" aria-labelledby="people-heading">
+                <p class="people-eyebrow">The people behind our journey</p>
+                <h1 class="people-heading" id="people-heading">
+                    Guided by great minds,<br>
+                    built by a driven team
+                </h1>
+                <p class="people-intro">
+                    Guided by great minds, built by a driven team
+                </p>
+
+                <div class="people-block">
+                    <h2 class="people-block-title">Meet the team &middot; Co-founders</h2>
+                    <div class="team-grid">
+                        <a class="team-member-card"
+                            href="https://www.linkedin.com/in/raghu-nandan-p/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            <div class="team-photo-placeholder">
+                                <img src="assets/images/raghu.png" alt="Raghu profile photo">
+                            </div>
+                            <h3>Raghu</h3>
+                            <p class="team-company">Merizo</p>
+                            <p class="team-role">Developer</p>
+                            <p>
+                                Building Merizo with focus, collaboration, and product quality.
+                            </p>
+                        </a>
+
+                        <a class="team-member-card"
+                            href="https://www.linkedin.com/in/jagadeesh-raavi/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="team-photo-placeholder">
+                                <img src="./assets/images/jagadeesh.png" alt="Jagadeesh profile photo">
+                            </div>
+                            <h3>Jagadeesh</h3>
+                            <p class="team-company">Merizo</p>
+                            <p class="team-role">Developer</p>
+                            <p>
+                                Steady engineering mindset with attention to useful product details.
+                            </p>
+                        </a>
+
+                        <a class="team-member-card"
+                            href="https://www.linkedin.com/in/durga-mahesh-uppu-231b0128a/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="team-photo-placeholder">
+                                <img src="./assets/images/mahesh.png" alt="Durga Mahesh profile photo">
+                            </div>
+                            <h3>Durga Mahesh</h3>
+                            <p class="team-company">Merizo</p>
+                            <p class="team-role">Developer</p>
+                            <p>
+                                Connecting product direction with hands-on development.
+                            </p>
+                        </a>
+
+                        <a class="team-member-card"
+                            href="https://www.linkedin.com/in/kaviya-sivakumar-b594092a9/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="team-photo-placeholder">
+                                <img src="./assets/images/kaviya.jpeg" alt="Kaviya profile photo">
+                            </div>
+                            <h3>Kaviya</h3>
+                            <p class="team-company">Merizo</p>
+                            <p class="team-role">Developer</p>
+                            <p>
+                                Care and consistency as we build Merizo for real-world shared expenses.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="people-block">
+                    <h2 class="people-block-title">Our gratitude — mentor &amp; leadership</h2>
+                    <div class="gratitude-grid">
+                        <article class="story-card gratitude-card">
+                            <h3>Krishna Kompalli</h3>
+                            <p class="story-role">Technical Mentor &middot; AI Product Development</p>
+                            <p class="team-role">Mentor</p>
+                            <p>
+                                Guided the team through Merizo's development — from intelligent voice-based bill entry to
+                                automated scanning. His technical insight turned a complex problem into an intuitive
+                                product.
+                            </p>
+                            <p>
+                                We're deeply grateful for his time, expertise, and trust in our potential.
+                            </p>
+                        </article>
+
+                        <article class="story-card gratitude-card">
+                            <h3>Uday Kanth S</h3>
+                            <p class="story-role">Founder, CEO &amp; MD &middot; Flyers Soft Pvt. Ltd.</p>
+                            <p class="team-role">Founder &amp; CEO</p>
+                            <p>
+                                Uday and Flyers Soft provided the direction, encouragement, and environment to build
+                                Merizo right. His leadership helped us approach the product with innovation and
+                                precision.
+                            </p>
+                            <p class="story-quote">
+                                "Building creative, innovative solutions for a diversified world."
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="copyright">&copy;2026 MERIZO</div>
+
+            <div class="footer-center">
+                <a href="https://play.google.com/store/search?q=Merizo&c=apps" target="_self" aria-label="Get Merizo on Google Play">
+                    <img
+                        class="playstore-badge"
+                        src="./assets/images/playstore.png"
+                        width="314"
+                        height="93"
+                        alt="Get it on Google Play"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </a>
+                <p>Follow Merizo</p>
+                <a class="x-logo" href="https://x.com/Merizoomada" aria-label="Merizo on X">
+                    <img
+                        src="./assets/images/twitter-x-small.png"
+                        srcset="./assets/images/twitter-x-small.png 64w, ./assets/images/Twitter_new_X_logo.png 752w"
+                        sizes="30px"
+                        width="30"
+                        height="30"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </a>
+                <div class="footer-links">
+                    <a href="index.html">HOME</a>
+                    <a href="https://x.com/Merizoomada">X</a>
+                    <a href="https://www.linkedin.com/in/merizo-omada-b02406413/">LINKEDIN</a>
+                    <a href="https://www.instagram.com/merizoomada/">INSTAGRAM</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="contact.html">CONTACT US</a>
+                    <a href="Privacy%20and%20Policy.html">PRIVACY & POLICY</a>
+                    <a href="Merizo%20Pro.html">Merizo Pro</a>
+                </div>
+            </div>
+
+            <div class="cosmic-curiosity">Merizo Omada</div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var intro = document.querySelector("[data-typed-intro]");
+            var lines = intro ? Array.prototype.slice.call(intro.querySelectorAll("[data-type-line]")) : [];
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (!intro || !lines.length || reduceMotion) {
+                return;
+            }
+
+            var cursor = document.createElement("span");
+            cursor.className = "typed-cursor";
+            cursor.setAttribute("aria-hidden", "true");
+            cursor.textContent = "|";
+
+            var heading = lines[0];
+            var headingText = heading.textContent.replace(/\s+/g, " ").trim();
+            var answerLines = lines.slice(1);
+
+            answerLines.forEach(function (line) {
+                line.classList.add("typed-answer-hidden");
+            });
+
+            heading.textContent = "";
+            heading.appendChild(cursor);
+
+            var position = 0;
+
+            function revealAnswers() {
+                intro.classList.add("merizo-typing-complete");
+                answerLines.forEach(function (line, index) {
+                    window.setTimeout(function () {
+                        line.classList.remove("typed-answer-hidden");
+                        line.classList.add("typed-answer-visible");
+                    }, index * 80);
+                });
+            }
+
+            function tick() {
+                if (position < headingText.length) {
+                    cursor.remove();
+                    heading.textContent += headingText.charAt(position);
+                    heading.appendChild(cursor);
+                    position += 1;
+                    window.setTimeout(tick, headingText.charAt(position - 1) === " " ? 24 : 42);
+                    return;
+                }
+
+                cursor.remove();
+                window.setTimeout(revealAnswers, 220);
+            }
+
+            tick();
+        });
+    </script>
+</body>
+</html>

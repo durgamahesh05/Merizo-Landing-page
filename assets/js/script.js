@@ -5,31 +5,15 @@
   let initialX = 0;
   let initialY = 0;
   const playStoreUrl = "https://play.google.com/store/search?q=Merizo&c=apps";
-  const appStoreUrl = "https://apps.apple.com/us/search?term=Merizo";
+  const rowBillMoveLimit = 72;
 
-  function isIOSDevice() {
-    return (
-      /iPad|iPhone|iPod/i.test(navigator.userAgent) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
-    );
-  }
-
-  function routeToApp() {
-    if (/Android/i.test(navigator.userAgent)) {
-      window.location.href = playStoreUrl;
-      return;
-    }
-
-    if (isIOSDevice()) {
-      window.location.href = appStoreUrl;
-      return;
-    }
-
-    window.location.href = "/login";
+  function routeToPlayStore(event) {
+    event.preventDefault();
+    window.open(playStoreUrl, "_self");
   }
 
   document.querySelectorAll("[data-open-app]").forEach((control) => {
-    control.addEventListener("click", routeToApp);
+    control.addEventListener("click", routeToPlayStore);
   });
 
   function getCurrentTranslate(element) {
@@ -49,6 +33,30 @@
     }
   }
 
+  function isRowBill(element) {
+    return element.closest(".bills-row") !== null;
+  }
+
+  function getRowBillMoveLimit() {
+    return window.matchMedia("(max-width: 640px)").matches ? 34 : rowBillMoveLimit;
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function getConstrainedTranslate(element, x, y) {
+    if (!isRowBill(element)) {
+      return { x, y };
+    }
+
+    const limit = getRowBillMoveLimit();
+    return {
+      x: clamp(x, -limit, limit),
+      y: 0,
+    };
+  }
+
   function handleParallax(event) {
     if (prefersReducedMotion || activeBill) return;
 
@@ -59,8 +67,13 @@
       const speed = parseFloat(bill.dataset.speed || "0.05");
       const baseX = parseFloat(bill.dataset.x || "0");
       const baseY = parseFloat(bill.dataset.y || "0");
-      const x = baseX + mouseX * speed * 1000;
-      const y = baseY + mouseY * speed * 1000;
+      const next = getConstrainedTranslate(
+        bill,
+        baseX + mouseX * speed * 1000,
+        baseY + mouseY * speed * 1000
+      );
+      const x = next.x;
+      const y = next.y;
       bill.style.transform = `translate(${x}px, ${y}px)`;
     });
   }
@@ -87,8 +100,13 @@
     if (!activeBill) return;
     event.preventDefault();
 
-    const currentX = event.clientX - initialX;
-    const currentY = event.clientY - initialY;
+    const next = getConstrainedTranslate(
+      activeBill,
+      event.clientX - initialX,
+      event.clientY - initialY
+    );
+    const currentX = next.x;
+    const currentY = next.y;
 
     activeBill.dataset.x = String(currentX);
     activeBill.dataset.y = String(currentY);

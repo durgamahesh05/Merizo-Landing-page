@@ -1,6 +1,7 @@
 # Merizo Landing Page
 
-A React + Vite single-page app for the Merizo marketing site.
+A React + Vite single-page app for the Merizo marketing site. 
+The App with AI Features
 
 ## Project Structure
 
